@@ -1,0 +1,9 @@
+<mat-list>
+  <div mat-subheader>Loved Ones</div>
+  <mat-list-item *ngFor="let friend of friends">
+    <mat-icon mat-list-icon matBadge="4" matBadgeColor="warn">account_circle</mat-icon>
+    <div mat-line>{{friend.name}}</div>
+    <div mat-line> {{friend.lastSeen | date}} </div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
