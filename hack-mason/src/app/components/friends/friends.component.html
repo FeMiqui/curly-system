@@ -1,7 +1,11 @@
 <mat-list>
   <div mat-subheader>Loved Ones</div>
   <mat-list-item *ngFor="let friend of friends">
-    <mat-icon mat-list-icon matBadge="4" matBadgeColor="warn">account_circle</mat-icon>
+    <mat-icon mat-list-icon *ngIf="friend.status.safe" matBadge="s" matBadgeColor="accent" matBadgeSize="small"
+      matBadgePosition="below">
+      account_circle <mat-icon></mat-icon>
+    </mat-icon>
+    <mat-icon *ngIf="!friend.status.safe" mat-list-icon>account_circle</mat-icon>
     <div mat-line>{{friend.name}}</div>
     <div mat-line> {{friend.lastSeen | date}} </div>
   </mat-list-item>
