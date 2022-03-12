@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-button routerLink=""><span>{{app_name}}</span></button>
+    <span class=" example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p><button routerLink="profile" mat-button>Profile</button></p>
+    <p><button routerLink="settings" mat-button>Settings</button></p>
+    <!-- <p><button routerLink="mypage" mat-button>MyPage</button></p> -->
+  </mat-drawer>
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
