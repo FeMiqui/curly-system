@@ -1,1 +1,26 @@
-<p>landing-page works!</p>
+<form [formGroup]="form">
+  <h1>We're here to help</h1>
+<mat-form-field appearance="outline">
+  <mat-label>First Name</mat-label>
+  <input matInput placeholder="First Name" id="firstName" />
+</mat-form-field>
+<br>
+  <mat-form-field appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Last Name" id="lastName" />
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Birthday</mat-label>
+    <input matInput placeholder="birthday" id="birthday" />
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Phone</mat-label>
+    <input mtype="tel" matInput placeholder="+1 555-555-1234" id="phoneNumber">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="warn" (click)="submitForm()">
+    Submit
+  </button>
+</form>

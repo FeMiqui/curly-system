@@ -1,19 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChatComponent } from './components/chat/chat.component';
+import { HelpComponent } from './components/help/help.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { SettingsComponent } from './components/settings/settings.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {
-    path:'',component:LandingPageComponent
+    path: '',
+    component: LandingPageComponent,
   },
   {
-    path:'settings',component:SettingsComponent
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
+    path: 'chat',
+    component: ChatComponent,
+  },
+  {
+    path: 'help',
+    component: HelpComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

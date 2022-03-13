@@ -6,6 +6,48 @@ export const environment = {
   production: false
 };
 
+export const usersTemplate = [
+  {
+    name: "User1",
+    lastSeen: new Date('1/1/16'),
+    status: {
+      safe: true,
+      comments: "Felling a lil bit hungry but safe"
+    }
+  },
+  {
+    name: "User2",
+    lastSeen: new Date('1/1/16'),
+    status: {
+      safe:false,
+      comments: "In need of some supplies"
+    }
+  },
+  {
+    name: "User3",
+    lastSeen: new Date('1/1/16'),
+    status: {
+      safe: false,
+      comments: "Need medication"
+    }
+  },
+  {
+    name: "User4",
+    lastSeen: new Date('1/1/16'),
+    status: {
+      safe: true,
+      comments: "Crossed the border already"
+    }
+  },
+  {
+    name: "User5",
+    lastSeen: new Date('1/1/16'),
+    status: {
+      safe: true,
+      comments: "On vacation"
+    }
+  },
+];
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

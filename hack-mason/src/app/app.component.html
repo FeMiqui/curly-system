@@ -5,17 +5,26 @@
     </button>
     <button mat-button routerLink=""><span>{{app_name}}</span></button>
     <span class=" example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon">
+    <!-- <button mat-icon-button class="example-icon favorite-icon" (click)="friends.toggle()">
       <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon">
+    </button> -->
+    <!-- <button mat-icon-button class="example-icon">
       <mat-icon>share</mat-icon>
-    </button>
+    </button> -->
   </mat-toolbar>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p><button routerLink="profile" mat-button>Profile</button></p>
-    <p><button routerLink="settings" mat-button>Settings</button></p>
+    <p><button routerLink="/" mat-button><mat-icon>home</mat-icon> home</button></p>
+    <!-- <p><button routerLink="profile" mat-button><mat-icon>account_circle</mat-icon> profile</button></p> -->
+    <!-- <p><button routerLink="settings" mat-button>Settings</button></p> -->
+    <!-- <p><button routerLink="chat" mat-button><mat-icon>book</mat-icon> chat</button></p> -->
+    <p><button routerLink="help" mat-button><mat-icon>map</mat-icon> directions</button></p>
+    <p><button routerLink="alerts" mat-button><mat-icon>alarm</mat-icon> alerts</button></p>
+    <p><button mat-button (click)="friends.toggle()"><mat-icon>favorite</mat-icon> contacts</button></p>
+    <p><button routerLink="chat" mat-button><mat-icon>help</mat-icon> support</button></p>
     <!-- <p><button routerLink="mypage" mat-button>MyPage</button></p> -->
+  </mat-drawer>
+  <mat-drawer #friends class="example-sidenav" mode="side" position="end">
+    <app-friends></app-friends>
   </mat-drawer>
   <div class="example-sidenav-content">
     <router-outlet></router-outlet>
